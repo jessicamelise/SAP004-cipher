@@ -1,20 +1,32 @@
 const cipher = {
-  encode: function (numero, string) {
-    if (typeof (numero) != typeof (0)) {
+  encode: function (offset, phrase) {
+    if (typeof (offset) != typeof (0)) {
       throw new TypeError();
-    } else if (typeof (string) != typeof ("a")) {
+    } else if (typeof (phrase) != typeof ("a")) {
       throw new TypeError();
     }
+
+    let encodePhrase = "";
+
+    for (let i = 0; i < phrase.length; i++) {
+      let valueI = phrase[i].toUpperCase();
+      let valueChar = valueI.charCodeAt();
+      let result = ((valueChar - 65 + offset) % 26) + 65;
+      encodePhrase += String.fromCharCode(result);
+    }
+    return encodePhrase;
   },
 
-  decode: function (numero, string) {
-    if (typeof (numero) != typeof (0)) {
+  decode: function (offset, phrase) {
+    if (typeof (offset) != typeof (0)) {
       throw new TypeError();
-    } else if (typeof (string) != typeof ("a")) {
+    } else if (typeof (phrase) != typeof ("a")) {
       throw new TypeError();
     }
-  }
 
+
+  },
 };
 
-export default cipher;
+
+//export default cipher;
