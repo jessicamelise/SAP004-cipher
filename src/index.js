@@ -20,7 +20,7 @@ encodeButton.addEventListener("click", encodeClick);
 function encodeClick () {
     let value = parseInt(offsetNumber.value);
     let codeMessage = cipher.encode(value, takePhrase.value);
-    receiveCipherPhrase.innerHTML = codeMessage;
+    receiveCipherPhrase.value = codeMessage;
     boxCipherMessage.style.display = "block";
 }
 
