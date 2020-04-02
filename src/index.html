@@ -10,28 +10,27 @@
 
 <body>
   <header>
-    <h1>Título do meu tema</h1>
+    <h1 class="title">Code'School</h1>
   </header>
   <main>
     <div class="messageField">
       <div id="boxToCipher">
-        <p>Sua mensgem:</p>
+        <p>Sua mensagem:</p>
         <p>
           <textarea class="text" rows="5" id="takePhrase"></textarea>
         </p>
-        <p>Valor de deslocamento:</p>
-        <p>
-          <input type="number" min="0" id="offsetNumber">
+        <p>Deslocamento:
+          <input type="number" min="0" class="offset" id="offsetNumber">
         </p>
         <div>
           <p>
-            <button id="encodeButton">Cifrar</button>
-            <button>Decifrar</button>
+            <button class="buttons" id="encodeButton">Cifrar</button>
+            <button class="buttons" id="decodeButton">Decifrar</button>
           </p>
         </div>
       </div>
       <div id="boxCipherMessage">
-        <p>Sua mensagem cifrada é:</p>
+        <p>Sua mensagem cifrada/decifrada é:</p>
         <p>
           <textarea class="text" rows="5" id="receiveCipherPhrase"></textarea>
         </p>
