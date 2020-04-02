@@ -2,28 +2,22 @@ import cipher from './cipher.js';
 
 let takePhrase = document.getElementById("takePhrase");
 let offsetNumber = document.getElementById("offsetNumber");
-let boxToCipher = document.getElementById("boxToCipher");
-let boxCipherMessage = document.getElementById("boxCipherMessage");
 let receiveCipherPhrase = document.getElementById("receiveCipherPhrase");
 let encodeButton = document.getElementById("encodeButton");
-
-startDisplay();
-
-function startDisplay () {
-boxToCipher.style.display = "block";
-boxCipherMessage.style.display = "none";
-}
-
-encodeButton.addEventListener("click", encodeClick);
-
+let decodeButton = document.getElementById("decodeButton");
 
 function encodeClick () {
     let value = parseInt(offsetNumber.value);
     let codeMessage = cipher.encode(value, takePhrase.value);
     receiveCipherPhrase.value = codeMessage;
-    boxCipherMessage.style.display = "block";
 }
 
+encodeButton.addEventListener("click", encodeClick);
 
+function decodeClick () {
+    let value = parseInt(offsetNumber.value);
+    let decodeMessage = cipher.decode(value, takePhrase.value);
+    receiveCipherPhrase.value = decodeMessage;
+}
 
-
+decodeButton.addEventListener("click", decodeClick);
