@@ -13,7 +13,6 @@
     <h1 class="title">Code'School</h1>
   </header>
   <main>
-    <div class="about">
       <aside>
         <h3>Sobre o Code'School</h3>
         <p>Lembra daqueles recadinhos e conversas em código que faziamos na escola durante as aulas? <br>
@@ -21,25 +20,22 @@
           Aqui no Code'School você pode reviver essa época linda e gostosa! <br>
           Criar códigos para falar com seus colegas nunca foi tão fácil!</p>
       </aside>
-    </div>
     <div class="messageField">
-      <div>
         <p>Sua mensagem:</p>
-          <textarea class="text" maxlength="150" rows="5" id="takePhrase"></textarea>
-        <p>Deslocamento:
-          <input type="number" min="0" class="offset" id="offsetNumber">
-        </p>
+          <textarea class="text" maxlength="150" id="takePhrase"></textarea>
+        <div>
+          <p>Deslocamento:
+            <input type="number" min="0" class="offset" id="offsetNumber">
+          </p>
+        </div>
         <div>
             <button class="buttons" id="encodeButton">Cifrar</button>
             <button class="buttons" id="decodeButton">Decifrar</button>
         </div>
-      </div>
-      <div>
         <p>Sua mensagem cifrada/decifrada é:</p>
           <textarea class="text" maxlength="150" rows="5" id="receiveCipherPhrase"></textarea>
       </div>
     </div>
-    <div class="instructions">
       <aside>
         <h3>Intruções</h3>
         <p>- Digite seu recado a ser cifrado ou já cifrado no primeiro box. (max. 150 caracteres) <br>
@@ -50,7 +46,6 @@
           E se divirta!!!
         </p>
       </aside>
-    </div>
   </main>
   
   <script src="index.js" type="module"></script>

@@ -1,34 +1,36 @@
 body {
-    align-items: center;
-    text-align: center;
     font-family: 'Indie Flower', cursive;
     background-image: url(fundo.png);
     color: darkblue;
-    font-size: 25px;
-    height: 100%;
+    font-size: 25px;;
 }
 main {
-    display: inline-flex;
-    width: 100%;
-    height: 80%;
+    display: flex;
+    justify-content: center;
+    height: 550px;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    height: 10%;
+    text-align: center;
+}
+h1 {
+    margin: 5px 32px 40px;
 }
 
 .messageField {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
     background-color: rgb(255,249,231);
-    width: 50%;
-    margin: 50px 25px;
+    width: 35%;
+    margin: 0% 5%;
     box-shadow: 3px 3px 20px grey;
 }
 
 .text {
-    width: 550px;
-    height: 80px;
     border: solid;
     border-color: rgb(165, 223, 243);
     background-color:rgb(255,249,231);
@@ -36,11 +38,11 @@ header {
     font-size: 18px;
     font-family: 'Indie Flower', cursive;
     color: darkblue;
+    height: 15%;
 }
 
 .title {
     font-size: 70px;
-    margin: 0px 25px;
     background-color:rgba(255, 249, 231, 0.8);
     border-radius: 20px;
     color: darkblue;
@@ -55,7 +57,7 @@ header {
     font-size: 20px;
     font-family: 'Indie Flower', cursive;
     color: darkblue;
-    width: 100px;
+    width: 70px;
 }
 
 .buttons {
@@ -74,22 +76,14 @@ header {
     background-color: antiquewhite
 }
 
-.about {
+aside {
     background-color:rgba(255, 249, 231, 0.9);
-    display: inline-flex;
-    margin: 50px 25px;
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
     width: 25%;
-    justify-content: center;
     font-size: 22px;
+    text-align: center;
 }
 
-.instructions {
-    background-color:rgba(255, 249, 231, 0.9);
-    display: inline-flex;
-    margin: 50px 25px;
-    border-radius: 20px;
-    width: 25%;
-    justify-content: center;
-    font-size: 22px;
-}
+
