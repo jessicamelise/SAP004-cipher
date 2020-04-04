@@ -12,43 +12,48 @@
   <header>
     <h1 class="title">Code'School</h1>
   </header>
-  
   <main>
-      <aside>
-        <h3>Sobre o Code'School</h3>
-        <p>Lembra daqueles recadinhos e conversas em código que faziamos na escola durante as aulas? <br>
-          Seja para falar da vida, ou falar do(a) crush, mas sem que ninguém além do seu grupo, saiba? <br>
-          Aqui no Code'School você pode reviver essa época linda e gostosa! <br>
-          Criar códigos para falar com seus colegas nunca foi tão fácil!</p>
-      </aside>
-    <div class="messageField">
-        <p>Sua mensagem:</p>
-          <textarea class="text" maxlength="150" id="takePhrase"></textarea>
-        <div>
-          <p>Deslocamento:
-            <input type="number" min="0" class="offset" id="offsetNumber">
-          </p>
-        </div>
-        <div>
-            <button class="buttons" id="encodeButton">Cifrar</button>
-            <button class="buttons" id="decodeButton">Decifrar</button>
-        </div>
-        <p>Sua mensagem cifrada/decifrada é:</p>
-          <textarea class="text" maxlength="150" rows="5" id="receiveCipherPhrase"></textarea>
+    <aside>
+      <h3>Intruções</h3>
+      <p>- Digite seu recado a ser cifrado ou já cifrado no primeiro box. (max. 150 caracteres) <br>
+        - Coloque o número de deslocamento desejado. <br>
+        - Clique no botão de cifrar ou decifrar. <br>
+        - Obtenha o recado cifrado ou decifrado no box de baixo. <br>
+        <br>
+        E se divirta!!!
+      </p>
+    </aside>
+    <div class="message-field">
+      <p>Sua mensagem:</p>
+      <br>
+      <textarea class="text" maxlength="150" id="take-phrase"></textarea>
+      <div>
+        <p>Deslocamento:
+          <input type="number" min="0" class="offset" id="offset-number">
+        </p>
+      </div>
+      <div>
+        <button class="buttons" id="encode-button">Cifrar</button>
+        <button class="buttons" id="decode-button">Decifrar</button>
       </div>
     </div>
-      <aside>
-        <h3>Intruções</h3>
-        <p>- Digite seu recado a ser cifrado ou já cifrado no primeiro box. (max. 150 caracteres) <br>
-          - Coloque o número de deslocamento desejado. <br>
-          - Clique no botão de cifrar ou decifrar. <br>
-          - Obtenha o recado cifrado ou decifrado no box de baixo. <br>
-          <br>
-          E se divirta!!!
-        </p>
-      </aside>
+    <aside>
+      <h3>Sobre o Code'School</h3>
+      <p>Lembra daqueles recadinhos e conversas em código que faziamos na escola durante as aulas? <br>
+        Seja para falar da vida, ou falar do(a) crush, mas sem que ninguém além do seu grupo, saiba? <br>
+        Aqui no Code'School você pode reviver essa época linda e gostosa! <br>
+        Criar códigos para falar com seus colegas nunca foi tão fácil!</p>
+    </aside>
   </main>
-  
+  <div class="popup" id="popup">
+    <p>Sua nova mensagem é:</p>
+    <p></p>
+    <p>
+      <button class="buttons" id="copy-button">Copiar</button>
+      <button class="buttons" id="esc-button">Sair</button>
+    </p>
+  </div>
+  <div class="popup-background" id="popup-background"></div>
   <script src="index.js" type="module"></script>
 </body>
 
