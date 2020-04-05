@@ -6,9 +6,7 @@ Uma plataforma onde você pode criar mensagens codificadas e usá-la entre seus 
 
 Para ter acesso à plataforma, clique no link abaixo, siga as intruções e se divirta!
 
-```
-[CifrAmiga] (https://jessicamelise.github.io/SAP004-cipher/)
-```
+'[CifrAmiga](https://jessicamelise.github.io/SAP004-cipher/).'
 
 #### Intruções:
 
@@ -31,11 +29,11 @@ Projeto focado para o público jovem e adulto, possibilitando a criação mensag
 
 # Planejamento do site
 
-[x] Imagem de fundo: escolhido uma imagem que traga a simbologia de um ambiente escolar
-[x] Cores: paleta de cores de acordo com a imagem de fundo (no caso, tons de bege e azul) sendo o bege representando uma algo como folhas de caderno e o azul a cor de uma caneta.
-[x] Formas: Usar formas arredondadas que não indica um "ar" de seriedade, apenas a forma central será retangular para parecer uma folha de papel que receberá a mensagem.
-[x] Composição da página: aplicar simetria na página para não haver estranhamento na parte visual, no caso o titulo e 3 box abaixo, sendo o central em maior proporção que os da lateral
-[x] Tipográfia: tipografia do tipo letra de mão, também visando a simbologia do ambiente escolar
+- [x] Imagem de fundo: escolhido uma imagem que traga a simbologia de um ambiente escolar
+- [x] Cores: paleta de cores de acordo com a imagem de fundo (no caso, tons de bege e azul) sendo o bege representando uma algo como folhas de caderno e o azul a cor de uma caneta.
+- [x] Formas: Usar formas arredondadas que não indica um "ar" de seriedade, apenas a forma central será retangular para parecer uma folha de papel que receberá a mensagem.
+- [x] Composição da página: aplicar simetria na página para não haver estranhamento na parte visual, no caso o titulo e 3 box abaixo, sendo o central em maior proporção que os da lateral
+- [x] Tipográfia: tipografia do tipo letra de mão, também visando a simbologia do ambiente escolar
 
 # Autor
 Jéssica Melise de Mendonça
