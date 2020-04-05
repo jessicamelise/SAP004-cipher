@@ -5,17 +5,16 @@ Uma plataforma onde você pode criar mensagens codificadas e usá-la entre seus 
 # Acessar o site
 
 Para ter acesso à plataforma, clique no link abaixo, siga as intruções e se divirta!
-
-'[CifrAmiga](https://jessicamelise.github.io/SAP004-cipher/).'
+**[CifrAmiga](https://jessicamelise.github.io/SAP004-cipher/)**
 
 #### Intruções:
 
-- Acesse o site,
-- Digite sua mensagem a ser cifrada ou já cifrada no box (max. 150 caracteres),
-- Coloque o número de deslocamento desejado,
-- Clique no botão de cifrar ou decifrar,
-- Obtenha o recado cifrado ou decifrado no pop up,
-- Copie e envie a mensagem para quem desejar.
+- Acesse o site;
+- Digite o recado a ser cifrado ou decifrado no box (max. 150 caracteres);
+- Coloque o número de deslocamento desejado;
+- Clique no botão de cifrar ou decifrar;
+- Obtenha o recado cifrado ou decifrado no pop up;
+- Copie e envie a mensagem para quem desejar;
 
 # Objetivo
 
