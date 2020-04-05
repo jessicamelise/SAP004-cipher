@@ -34,6 +34,10 @@ describe('cipher', () => {
     it('should return " !@" for " !@"', () => {
       expect(cipher.encode(33, ' !@')).toBe(' !@');
     });
+
+    it('should return "CcNnAAAAAAaaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUUuuuuYYyy" para "ÇçÑñÄÅÁÂÀÃãâäàåáÊËÈÉéêëèÍÎÏÌïîìíÖÓÔÒÕõôöòóÜÚÛÙüûùúÝŸÿý"', () => {
+      expect(cipher.encode(0, 'ÇçÑñÄÅÁÂÀÃãâäàåáÊËÈÉéêëèÍÎÏÌïîìíÖÓÔÒÕõôöòóÜÚÛÙüûùúÝŸÿý')).toBe('CcNnAAAAAAaaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUUuuuuYYyy');
+    });
   });
 
   describe('cipher.decode', () => {
@@ -59,6 +63,10 @@ describe('cipher', () => {
 
     it('should return " !@" para " !@"', () => {
       expect(cipher.decode(33, ' !@')).toBe(' !@');
+    });
+
+    it('should return "CcNnAAAAAAaaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUUuuuuYYyy" para "ÇçÑñÄÅÁÂÀÃãâäàåáÊËÈÉéêëèÍÎÏÌïîìíÖÓÔÒÕõôöòóÜÚÛÙüûùúÝŸÿý"', () => {
+      expect(cipher.decode(0, 'ÇçÑñÄÅÁÂÀÃãâäàåáÊËÈÉéêëèÍÎÏÌïîìíÖÓÔÒÕõôöòóÜÚÛÙüûùúÝŸÿý')).toBe('CcNnAAAAAAaaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUUuuuuYYyy');
     });
   });
 
