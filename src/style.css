@@ -83,8 +83,16 @@ aside {
     flex-direction: column;
     border-radius: 20px;
     width: 25%;
-    font-size: 22px;
+    font-size: 21px;
     text-align: center;
+}
+
+#receive-new-message {
+    background-color:rgb(255,249,231);
+    font-family: 'Indie Flower', cursive;
+    border: none;
+    font-size: 25px;
+    color: darkblue;
 }
 
 .popup {
