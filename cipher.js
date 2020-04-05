@@ -29,14 +29,9 @@ const cipher = {
     for (let i = 0; i < phrase.length; i++) {
       let valueI = phrase[i].toUpperCase();
       let valueChar = valueI.charCodeAt();
-      let result = ((valueChar - 65 - offset) % 26);
-      if (result < 0) {
-        result += 26 + 65;
-        decodePhrase += String.fromCharCode(result);
-      } else {
-        result += 65;
-        decodePhrase += String.fromCharCode(result);
-      }
+      let result = ((valueChar - 90 - offset) % 26) + 90;
+      decodePhrase += String.fromCharCode(result);
+     
     }
     return decodePhrase;
   },
