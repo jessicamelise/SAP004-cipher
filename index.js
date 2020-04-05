@@ -9,6 +9,7 @@ let popup = document.getElementById("popup");
 let popupBackground = document.getElementById("popup-background");
 let copyButton = document.getElementById("copy-button");
 let escButton = document.getElementById("esc-button");
+let messageCopy = document.getElementById("message-copy");
 
 function encodeClick () {
     popup.classList.add("exibir");
@@ -33,6 +34,7 @@ decodeButton.addEventListener("click", decodeClick);
 function escClick () {
     popup.classList.remove("exibir");
     popupBackground.classList.remove("exibir");
+    messageCopy.style.visibility = "hidden";
 }
 
 escButton.addEventListener("click", escClick);
@@ -40,7 +42,7 @@ escButton.addEventListener("click", escClick);
 function copyClick () {
     receiveNewMessage.select();
     document.execCommand("copy");
-    alert("Mensagem copiada!");
+    messageCopy.style.visibility = "visible";
 }
 
 copyButton.addEventListener("click", copyClick);

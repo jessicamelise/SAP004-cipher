@@ -95,6 +95,10 @@ aside {
     color: darkblue;
 }
 
+#message-copy {
+    visibility: hidden;
+}
+
 .popup {
     position: fixed;
     top: calc(50% - 200px);

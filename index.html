@@ -19,7 +19,7 @@
         - Coloque o número de deslocamento desejado. <br>
         - Clique no botão de cifrar ou decifrar. <br>
         - Obtenha o recado cifrado ou decifrado no pop up. <br>
-        - Copie e envie a mensgem para quem desejar. <br>
+        - Copie e envie a mensagem para quem desejar. <br>
         <br>
         E se divirta!!!
       </p>
@@ -53,12 +53,13 @@
   <div class="popup" id="popup">
     <p>Sua nova mensagem é:</p>
     <p>
-      <input type="text" readonly="true" id="receive-new-message">
+      <textarea readonly="true" id="receive-new-message"></textarea>
     </p>
     <p>
       <button class="buttons" id="copy-button">Copiar</button>
       <button class="buttons" id="esc-button">Sair</button>
     </p>
+    <p id="message-copy">Sua mensagem foi copiada!</p>
   </div>
   <div class="popup-background" id="popup-background"></div>
   <script src="index.js" type="module"></script>
