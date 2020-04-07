@@ -141,3 +141,7 @@ aside {
     visibility: visible;
     opacity: 1;
 }
+
+#em-paperclip {
+    transform: scale(1.5);
+}
