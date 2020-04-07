@@ -11,27 +11,35 @@ let copyButton = document.getElementById("copy-button");
 let escButton = document.getElementById("esc-button");
 let messageCopy = document.getElementById("message-copy");
 
-function encodeClick () {
-    popup.classList.add("exibir");
-    popupBackground.classList.add("exibir");
-    let value = parseInt(offsetNumber.value);
-    let codeMessage = cipher.encode(value, takePhrase.value);
-    receiveNewMessage.value = codeMessage;
+function encodeClick() {
+    if (takePhrase.value == "" || offsetNumber.value == "") {
+        alert("Por favor preencha o campo de mensagem e de deslocamento");
+    } else {
+        popup.classList.add("exibir");
+        popupBackground.classList.add("exibir");
+        let value = parseInt(offsetNumber.value);
+        let codeMessage = cipher.encode(value, takePhrase.value);
+        receiveNewMessage.value = codeMessage;
+    }
 }
 
 encodeButton.addEventListener("click", encodeClick);
 
-function decodeClick () {
-    popup.classList.add("exibir");
-    popupBackground.classList.add("exibir");
-    let value = parseInt(offsetNumber.value);
-    let decodeMessage = cipher.decode(value, takePhrase.value);
-    receiveNewMessage.value = decodeMessage;
+function decodeClick() {
+    if (takePhrase.value == "" || offsetNumber.value == "") {
+        alert("Por favor preencha o campo de mensagem e de deslocamento");
+    } else {
+        popup.classList.add("exibir");
+        popupBackground.classList.add("exibir");
+        let value = parseInt(offsetNumber.value);
+        let decodeMessage = cipher.decode(value, takePhrase.value);
+        receiveNewMessage.value = decodeMessage;
+    }
 }
 
 decodeButton.addEventListener("click", decodeClick);
 
-function escClick () {
+function escClick() {
     popup.classList.remove("exibir");
     popupBackground.classList.remove("exibir");
     messageCopy.style.visibility = "hidden";
@@ -39,7 +47,7 @@ function escClick () {
 
 escButton.addEventListener("click", escClick);
 
-function copyClick () {
+function copyClick() {
     receiveNewMessage.select();
     document.execCommand("copy");
     messageCopy.style.visibility = "visible";
