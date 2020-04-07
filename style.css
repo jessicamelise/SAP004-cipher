@@ -87,6 +87,8 @@ aside {
 }
 
 #receive-new-message {
+    width: 500px;
+    height: 150px;
     background-color:rgb(255,249,231);
     font-family: 'Indie Flower', cursive;
     border: none;
@@ -99,16 +101,18 @@ aside {
 }
 
 .popup {
+    visibility: hidden;
     position: fixed;
     top: calc(50% - 200px);
-    left: calc(50% - 200px);
+    left: calc(50% - 300px);
     background-color:rgb(255,249,231);
-    width: 400px;
+    width: 600px;
     height: 400px;
     z-index: 2;
     box-shadow: 3px 3px 20px grey;
-    transition: transform 0.5s;
-    transform: translate(0, 100vh);
+    transform: translate(10px);
+    opacity: 0;
+    transition: all 1s;
     font-size: 25px;
     padding: 10px;
     text-align: center;
@@ -124,22 +128,16 @@ aside {
     height: 100%;
     z-index: 1;
     background-color: rgba(255,255,255,0.8);
-    /* transition-property: opacity, visibility;
-    transition-duration: 1s, 0s;
-    transition-delay: 0s, 1s; */
-    transition: opacity 1s, visibility 0s 1s;
+    transition: all 1s;
 }
 
 .popup.exibir {
-    transform: translate(0, 0vh);
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0px);
 }
 
 .popup-background.exibir {
     visibility: visible;
     opacity: 1;
-    /* transition-property: opacity, visibility;
-    transition-duration: 1s, 0s;
-    transition-delay: 0s, 0s; */
-    transition: opacity 1s, visibility 0s 0s;
 }
-
