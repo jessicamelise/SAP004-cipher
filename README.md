@@ -2,7 +2,7 @@
 
 Uma plataforma onde você pode criar mensagens codificadas e usá-la entre seus amigos, relembrando a época dos recadinhos que eram passados na escola.
 
-# Acessar o site
+# Página Web
 
 Para ter acesso à plataforma, clique no link abaixo, siga as intruções e se divirta!
 
@@ -38,4 +38,4 @@ Projeto focado para o público jovem e adulto, possibilitando a criação mensag
 # Autor
 Jéssica Melise de Mendonça
 
-Projeto da Laboratória
+Projeto da @Laboratoria
