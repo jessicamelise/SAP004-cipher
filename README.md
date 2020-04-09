@@ -32,9 +32,9 @@ A página oferece um campo para a inserção de uma mensagem (para cifrar ou dec
 
 - [x] Imagem de fundo: escolhido uma imagem que traga a simbologia de um ambiente escolar
 - [x] Cores: paleta de cores de acordo com a imagem de fundo (no caso, bege e azul) sendo o bege representando algo como folhas de caderno e o azul a cor da caneta.
-- [x] Formas: aderido formas arredondadas que são descontraídas e modernas, apenas a forma central será retangular para parecer uma folha de papel que receberá a mensagem.
+- [x] Formas: aderido formas arredondadas que são descontraídas, apenas a forma central será retangular para parecer uma folha de papel que receberá a mensagem.
 - [x] Layout da página: usado simetria na página para não haver estranhamento na parte visual, temos o titulo e 3 box abaixo, sendo o central em maior proporção que os da lateral.
-- [x] Tipográfia: tipografia do tipo letra de mão, também visando a simbologia do ambiente escolar, escolhido a fonte "Indie Flower" no Google Fonts
+- [x] Tipográfia: tipografia do tipo letra de mão, também visando a simbologia do ambiente escolar, escolhido a fonte "Indie Flower" no Google Fonts.
 
 # Instalação do Projeto
 
