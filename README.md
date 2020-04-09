@@ -2,9 +2,9 @@
 
 Uma plataforma onde você pode criar mensagens codificadas e usá-la entre seus amigos, relembrando a época dos recadinhos que eram passados na escola.
 
-# Página Web
+# Interface
 
-Para ter acesso à plataforma, clique no link abaixo, siga as intruções e se divirta!
+Para ter acesso à página web, clique no link abaixo, siga as intruções e se divirta!
 
 **[CifrAmiga](https://jessicamelise.github.io/SAP004-cipher/)**
 
@@ -19,23 +19,40 @@ Para ter acesso à plataforma, clique no link abaixo, siga as intruções e se d
 
 # Objetivo
 
-Esse site foi projetado para pessoas que queiram reviver momentos nostalgicos da época de escola... lembra da famosa lingua do 'P'? Ou da troca de significado de algumas palavras onde só seu grupo de amigos soubesse? 
-
-É exatamente essa a ideia da plataforma CifrAmiga! Crie sua própria conversa em código para utilizar com seu grupo de amigos.
+Essa página foi projetada para pessoas que queiram reviver momentos nostalgicos da época de escola... Se lembra da famosa lingua do 'P'? Ou da troca de significado de algumas palavras onde só seu grupo de amigos soubesse? 
+É exatamente essa a ideia da CifrAmiga! Criar sua própria conversa em código para utilizar com seu grupo de amigos.
 
 # Usuário
 
-Projeto focado para o público jovem e adulto, possibilitando a criação mensagens codificadas para a comunicação entre um ou mais colegas, sem que outros saibam o que está sendo conversado.
+Projeto focado para o público jovem e adulto, possibilitando a criação de mensagens codificadas para a comunicação entre um ou mais colegas, sem que outros saibam o que está sendo conversado. 
+
+A página oferece um campo para a inserção de uma mensagem (para cifrar ou decifrar), e outro campo para a inserção do deslocamento, o usuário poderá escolher qual botão apertar (cifrar ou decifrar) e obterá a mensagem desejada no pop up que aparecerá, essa mensagem poderá ser copiada e enviaada para quem desejar.
 
 # Planejamento do site
 
 - [x] Imagem de fundo: escolhido uma imagem que traga a simbologia de um ambiente escolar
-- [x] Cores: paleta de cores de acordo com a imagem de fundo (no caso, tons de bege e azul) sendo o bege representando uma algo como folhas de caderno e o azul a cor de uma caneta.
-- [x] Formas: Usar formas arredondadas que não indica um "ar" de seriedade, apenas a forma central será retangular para parecer uma folha de papel que receberá a mensagem.
-- [x] Composição da página: aplicar simetria na página para não haver estranhamento na parte visual, no caso o titulo e 3 box abaixo, sendo o central em maior proporção que os da lateral
-- [x] Tipográfia: tipografia do tipo letra de mão, também visando a simbologia do ambiente escolar
+- [x] Cores: paleta de cores de acordo com a imagem de fundo (no caso, bege e azul) sendo o bege representando algo como folhas de caderno e o azul a cor da caneta.
+- [x] Formas: aderido formas arredondadas que são descontraídas e modernas, apenas a forma central será retangular para parecer uma folha de papel que receberá a mensagem.
+- [x] Layout da página: usado simetria na página para não haver estranhamento na parte visual, temos o titulo e 3 box abaixo, sendo o central em maior proporção que os da lateral.
+- [x] Tipográfia: tipografia do tipo letra de mão, também visando a simbologia do ambiente escolar, escolhido a fonte "Indie Flower" no Google Fonts
+
+# Instalação do Projeto
+
+- Use o Fork para criar um repositório em seu GitHub;
+- Click em "clone or download" e copie o link;
+- No terminal digite "git clone + link copiado" e dê enter;
+- Verifique se tem o nodejs instalado, se não tiver, acesse o link abaixo e faça a instalação;
+[nodejs](https://nodejs.org/pt-br/download/)
+- Digite no terminal "npm install" para instalar os pacotes necessários;
+- Abra no seu editor de código e está pronto para ser utilizado ou alterado;
+
+#### Comandos npm
+
+- npm run test: irá testar seu código e verificar se está cumprindo com o desejado;
+- npm run start: abrirá uma url no servidor;
+- npm run deploy: publicará seu projeto no GitHub Pages;
+
 
 # Autor
 Jéssica Melise de Mendonça
-
 Projeto da @Laboratoria
