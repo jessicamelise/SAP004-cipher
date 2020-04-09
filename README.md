@@ -41,8 +41,7 @@ A página oferece um campo para a inserção de uma mensagem (para cifrar ou dec
 - Use o Fork para criar um repositório em seu GitHub;
 - Click em "clone or download" e copie o link;
 - No terminal digite "git clone + link copiado" e dê enter;
-- Verifique se tem o nodejs instalado, se não tiver, acesse o link abaixo e faça a instalação;
-[nodejs](https://nodejs.org/pt-br/download/)
+- Verifique se tem o nodejs instalado, se não tiver, acesse esse [link](https://nodejs.org/pt-br/download/) e faça a instalação;
 - Digite no terminal "npm install" para instalar os pacotes necessários;
 - Abra no seu editor de código e está pronto para ser utilizado ou alterado;
 
