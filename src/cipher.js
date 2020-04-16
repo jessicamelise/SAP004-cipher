@@ -2,17 +2,17 @@ const cipher = {
   encode: function (offset, phrase) {
     validateParametersType(offset, phrase);
     let encodePhrase = "";
-    for (let i = 0; i < phrase.length; i++) {
-      let encodeResultAccent = removeAccent(phrase[i]);
-      let valueChar = encodeResultAccent.charCodeAt();
-      if (valueChar >= 65 && valueChar <= 90) {
-        let result = ((valueChar - 65 + offset) % 26) + 65;
+    for (let letter of phrase) {
+      let encodeResultAccent = removeAccent(letter);
+      let encodeAscCode = transformToAscCode(encodeResultAccent);
+      if (encodeAscCode >= ascCodeBigA && encodeAscCode <= ascCodeBigZ) {
+        let result = resultEncodeUpperCase(encodeAscCode, offset);
         encodePhrase += String.fromCharCode(result);
-      } else if (valueChar >= 97 && valueChar <= 122) {
-        let result = ((valueChar - 97 + offset) % 26) + 97;
+      } else if (encodeAscCode >= ascCodeSmallA && encodeAscCode <= ascCodeSmallZ) {
+        let result = resultEncodeLowerCase(encodeAscCode, offset);
         encodePhrase += String.fromCharCode(result);
       } else {
-        encodePhrase += encodeResultAccent;
+        encodePhrase += letter;
       }
     }
     return encodePhrase;
@@ -21,24 +21,30 @@ const cipher = {
   decode: function (offset, phrase) {
     validateParametersType(offset, phrase);
     let decodePhrase = "";
-    for (let i = 0; i < phrase.length; i++) {
-      let decodeResultAccent = removeAccent(phrase[i]);
-      let valueChar = decodeResultAccent.charCodeAt();
-      if (valueChar >= 65 && valueChar <= 90) {
-        let result = (valueChar - 90 - offset) % 26 + 90;
+    for (let letter of phrase) {
+      let decodeResultAccent = removeAccent(letter);
+      let decodeAscCode = transformToAscCode(decodeResultAccent);
+      if (decodeAscCode >= ascCodeBigA && decodeAscCode <= ascCodeBigZ) {
+        let result = resultDecodeUpperCase(decodeAscCode, offset);
         decodePhrase += String.fromCharCode(result);
-      } else if (valueChar >= 97 && valueChar <= 122) {
-        let result = (valueChar - 122 - offset) % 26 + 122;
+      } else if (decodeAscCode >= ascCodeSmallA && decodeAscCode <= ascCodeSmallZ) {
+        let result = resultDecodeLowerCase(decodeAscCode, offset);
         decodePhrase += String.fromCharCode(result);
       } else {
-        decodePhrase += decodeResultAccent;
+        decodePhrase += letter;
       }
     }
     return decodePhrase;
-  },
-};
+  }
+}
 
-function validateParametersType (offset, phrase) {
+const ascCodeBigA = "A".charCodeAt();
+const ascCodeSmallA = "a".charCodeAt();
+const ascCodeBigZ = "Z".charCodeAt();
+const ascCodeSmallZ = "z".charCodeAt()
+const alphabetSize = ascCodeBigZ - ascCodeBigA + 1;
+
+function validateParametersType(offset, phrase) {
   if (typeof (offset) != typeof (0)) {
     throw new TypeError();
   } else if (typeof (phrase) != typeof ("a")) {
@@ -53,11 +59,36 @@ function removeAccent(letter) {
   let valueI = alphaAccent.indexOf(letter);
   let convertLetter = "";
   if (valueI >= 0) {
-      convertLetter = convertAlphaAccent.substr(valueI, 1);
+    convertLetter = convertAlphaAccent.substr(valueI, 1);
   } else {
-      convertLetter = letter;
+    convertLetter = letter;
   }
   return convertLetter;
+}
+
+function resultEncodeUpperCase(code, offset) {
+  let result = ((code - ascCodeBigA + offset) % alphabetSize) + ascCodeBigA;
+  return result;
+}
+
+function resultEncodeLowerCase(code, offset) {
+  let result = ((code - ascCodeSmallA + offset) % alphabetSize) + ascCodeSmallA;
+  return result;
+}
+
+function resultDecodeUpperCase(code, offset) {
+  let result = ((code - ascCodeBigZ - offset) % alphabetSize) + ascCodeBigZ;
+  return result;
+}
+
+function resultDecodeLowerCase(code, offset) {
+  let result = ((code - ascCodeSmallZ - offset) % alphabetSize) + ascCodeSmallZ;
+  return result;
+}
+
+function transformToAscCode(letter) {
+  let valueAsc = letter.charCodeAt();
+  return valueAsc;
 }
 
 export default cipher;
