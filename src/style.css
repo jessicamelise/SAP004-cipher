@@ -91,7 +91,7 @@ aside {
     text-align: justify;
 }
 
-#receive-new-message {
+.receive-new-message {
     width: 500px;
     height: 150px;
     background-color:rgb(255,249,231);
@@ -101,7 +101,7 @@ aside {
     color: darkblue;
 }
 
-#message-copy {
+.message-copy {
     visibility: hidden;
 }
 
@@ -136,17 +136,21 @@ aside {
     transition: all 1s;
 }
 
-.popup.exibir {
+.popup.exhibit {
     visibility: visible;
     opacity: 1;
     transform: translate(0px);
 }
 
-.popup-background.exibir {
+.popup-background.exhibit {
     visibility: visible;
     opacity: 1;
 }
 
-#em-paperclip {
+.em-paperclip {
     transform: scale(1.5);
+}
+
+.line {
+    margin: 0px;
 }
