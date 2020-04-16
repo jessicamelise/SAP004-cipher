@@ -12,44 +12,74 @@ let escButton = document.getElementById("esc-button");
 let messageCopy = document.getElementById("message-copy");
 
 function encodeClick() {
-    if (takePhrase.value == "" || offsetNumber.value == "") {
-        alert("Por favor preencha o campo de mensagem e de deslocamento");
-    } else {
-        popup.classList.add("exibir");
-        popupBackground.classList.add("exibir");
-        let value = parseInt(offsetNumber.value);
-        let codeMessage = cipher.encode(value, takePhrase.value);
-        receiveNewMessage.value = codeMessage;
-    }
+    if (!validationField(takePhrase.value, offsetNumber.value)) {
+        popupAddClassExhibit();
+        callCipherEncode();
+    }  
 }
 
 encodeButton.addEventListener("click", encodeClick);
 
 function decodeClick() {
-    if (takePhrase.value == "" || offsetNumber.value == "") {
-        alert("Por favor preencha o campo de mensagem e de deslocamento");
-    } else {
-        popup.classList.add("exibir");
-        popupBackground.classList.add("exibir");
-        let value = parseInt(offsetNumber.value);
-        let decodeMessage = cipher.decode(value, takePhrase.value);
-        receiveNewMessage.value = decodeMessage;
+    if (!validationField(takePhrase.value, offsetNumber.value)) {
+        popupAddClassExhibit();
+        callCipherDecode();
     }
 }
 
 decodeButton.addEventListener("click", decodeClick);
 
+function validationField(phrase, number) {
+    if (phrase == "" || number == "") {
+        alert("Por favor preencha o campo de mensagem e de deslocamento");
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function popupAddClassExhibit() {
+    popup.classList.add("exhibit");
+    popupBackground.classList.add("exhibit");
+}
+
+function callCipherEncode() {
+    let codeMessage = cipher.encode(offsetNumber.valueAsNumber, takePhrase.value);
+    receiveNewMessage.value = codeMessage;
+}
+
+function callCipherDecode() {
+    let decodeMessage = cipher.decode(offsetNumber.valueAsNumber, takePhrase.value);
+    receiveNewMessage.value = decodeMessage;
+}
+
 function escClick() {
-    popup.classList.remove("exibir");
-    popupBackground.classList.remove("exibir");
-    messageCopy.style.visibility = "hidden";
+    popupRemoveClassExhibit();
+    copyFieldHidden();
 }
 
 escButton.addEventListener("click", escClick);
 
+function popupRemoveClassExhibit() {
+    popup.classList.remove("exhibit");
+    popupBackground.classList.remove("exhibit");
+}
+
 function copyClick() {
+    copyMessage();
+    copyFieldVisible();
+}
+
+function copyMessage() {
     receiveNewMessage.select();
     document.execCommand("copy");
+}
+
+function copyFieldHidden() {
+    messageCopy.style.visibility = "hidden";
+}
+
+function copyFieldVisible() {
     messageCopy.style.visibility = "visible";
 }
 
