@@ -26,7 +26,7 @@
       E se divirta!!!
     </aside>
     <div class="message-field">
-      <i class="em em-paperclip" id="em-paperclip" aria-role="presentation" aria-label="PAPERCLIP"></i>
+      <i class="em em-paperclip" aria-role="presentation" aria-label="PAPERCLIP"></i>
       <p>Sua mensagem:</p>
       <textarea placeholder="Digite aqui..." class="text" maxlength="150" id="take-phrase" required></textarea>
       <div>
@@ -41,25 +41,25 @@
     </div>
     <aside>
       <h3>Sobre a CifrAmiga</h3>
-      Lembra daqueles recadinhos e conversas em código que faziamos na escola durante as aulas? <br>
-      Seja para falar da vida, ou falar do(a) crush, mas sem que ninguém além do seu grupo, saiba? <br>
-      Aqui na CifrAmiga você pode reviver essa época linda e gostosa! <br>
-      Criar códigos para falar com seus colegas nunca foi tão fácil! <br>
-      <br>
-      A CifrAmiga utiliza o método de criptografia baseado na Cifra de César, para saber mais
-      <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">clique aqui.</a>
+      <p class="line">Lembra daqueles recadinhos e conversas em código que faziamos na escola durante as aulas?</p>
+      <p class="line">Seja para falar da vida, ou falar do(a) crush, mas sem que ninguém além do seu grupo saiba?</p>
+      <p class="line">Aqui na CifrAmiga você pode reviver essa época linda e gostosa!</p>
+      <p class="line">Criar códigos para falar com seus colegas nunca foi tão fácil!</p>
+      <p class="line">A CifrAmiga utiliza o método de criptografia baseado na Cifra de César, para saber mais
+        <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">clique aqui.</a>
+      </p>
     </aside>
   </main>
   <div class="popup" id="popup">
     <p>Sua nova mensagem é:</p>
     <p>
-      <textarea readonly="true" id="receive-new-message"></textarea>
+      <textarea readonly="true" id="receive-new-message" class="receive-new-message"></textarea>
     </p>
     <p>
       <button class="buttons" id="copy-button">Copiar</button>
       <button class="buttons" id="esc-button">Sair</button>
     </p>
-    <p id="message-copy">Mensagem copiada!</p>
+    <p id="message-copy" class="message-copy">Mensagem copiada!</p>
   </div>
   <div class="popup-background" id="popup-background"></div>
   <script src="index.js" type="module"></script>
