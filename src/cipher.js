@@ -5,12 +5,12 @@ const cipher = {
     for (let letter of phrase) {
       let encodeResultAccent = removeAccent(letter);
       let encodeAscCode = transformToAscCode(encodeResultAccent);
-      if (encodeAscCode >= ascCodeBigA && encodeAscCode <= ascCodeBigZ) {
-        let result = resultEncodeUpperCase(encodeAscCode, offset);
-        encodePhrase += String.fromCharCode(result);
-      } else if (encodeAscCode >= ascCodeSmallA && encodeAscCode <= ascCodeSmallZ) {
-        let result = resultEncodeLowerCase(encodeAscCode, offset);
-        encodePhrase += String.fromCharCode(result);
+      if (compareUpperCase(encodeAscCode)) {
+        let encodeLetter = resultEncodeUpperCase(encodeAscCode, offset);
+        encodePhrase += String.fromCharCode(encodeLetter);
+      } else if (compareLowerCase(encodeAscCode)) {
+        let encodeLetter = resultEncodeLowerCase(encodeAscCode, offset);
+        encodePhrase += String.fromCharCode(encodeLetter);
       } else {
         encodePhrase += letter;
       }
@@ -24,12 +24,12 @@ const cipher = {
     for (let letter of phrase) {
       let decodeResultAccent = removeAccent(letter);
       let decodeAscCode = transformToAscCode(decodeResultAccent);
-      if (decodeAscCode >= ascCodeBigA && decodeAscCode <= ascCodeBigZ) {
-        let result = resultDecodeUpperCase(decodeAscCode, offset);
-        decodePhrase += String.fromCharCode(result);
-      } else if (decodeAscCode >= ascCodeSmallA && decodeAscCode <= ascCodeSmallZ) {
-        let result = resultDecodeLowerCase(decodeAscCode, offset);
-        decodePhrase += String.fromCharCode(result);
+      if (compareUpperCase(decodeAscCode)) {
+        let decodeLetter = resultDecodeUpperCase(decodeAscCode, offset);
+        decodePhrase += String.fromCharCode(decodeLetter);
+      } else if (compareLowerCase(decodeAscCode)) {
+        let decodeLetter = resultDecodeLowerCase(decodeAscCode, offset);
+        decodePhrase += String.fromCharCode(decodeLetter);
       } else {
         decodePhrase += letter;
       }
@@ -89,6 +89,16 @@ function resultDecodeLowerCase(code, offset) {
 function transformToAscCode(letter) {
   let valueAsc = letter.charCodeAt();
   return valueAsc;
+}
+
+function compareUpperCase(value) {
+  let compare = value >= ascCodeBigA && value <= ascCodeBigZ;
+  return compare;
+}
+
+function compareLowerCase(value) {
+  let compare = value >= ascCodeSmallA && value <= ascCodeSmallZ;
+  return compare;
 }
 
 export default cipher;
